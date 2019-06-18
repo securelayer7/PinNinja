@@ -19,8 +19,8 @@ int gcheck(){
       }      
       if(flag == 0){
         pinval[i]=0;
-        Serial.print("Gnd : ");
-        Serial.println(inPin[i]);
+        Serial.print("Gnd : A");
+        Serial.println(inPin[i]-14);
         return i;
       }
     }
@@ -47,16 +47,16 @@ int txrx(int gnd){
       }
    }
    if(c1 < c2){
-    Serial.print("Tx : ");
-    Serial.println(inPin[p2]);
-    Serial.print("Rx : ");
-    Serial.println(inPin[p1]);
+    Serial.print("Tx : A");
+    Serial.println(inPin[p2]-14);
+    Serial.print("Rx : A");
+    Serial.println(inPin[p1]-14);
    }
    else{
-    Serial.print("Tx : ");
-    Serial.println(inPin[p1]);
-    Serial.print("Rx : ");
-    Serial.println(inPin[p2]);
+    Serial.print("Tx : A");
+    Serial.println(inPin[p1]-14);
+    Serial.print("Rx : A");
+    Serial.println(inPin[p2]-14);
    }
 }
 
@@ -77,8 +77,8 @@ int vcheck(int gnd){
       } 
       if(flag == 1){
         pinval[i]=0;
-        Serial.print("Vcc : ");
-        Serial.println(inPin[i]);
+        Serial.print("Vcc : A");
+        Serial.println(inPin[i]-14);
      }
       analogWrite(inPin[i],0);
     }
